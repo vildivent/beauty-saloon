@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { Outlet, useMatch } from "react-router-dom";
-import { Footer, Navbar } from "./UI";
+import { Footer, Navbar, Sidebar } from "./UI";
+import { Context } from "../context";
 
 export const Layout = () => {
   const match = useMatch("/");
+
+  const [sidebarIsOpened, setSidebarIsOpened] = useState(false);
+
   return (
     <>
-      <Navbar isHomePage={match} />
+      <Context.Provider value={{ sidebarIsOpened, setSidebarIsOpened }}>
+        <Navbar isHomePage={match} />
+        <Sidebar sidebarIsOpened={sidebarIsOpened} />
+      </Context.Provider>
       <Outlet />
       <Footer />
     </>

@@ -4,9 +4,8 @@ import { mouse } from "../../assets";
 const Header = () => {
   return (
     <div
-      className={`bg-bg-img bg-center bg-cover bg-local bg-no-repeat opacity-80`}
+      className={`bg-bg-img bg-center bg-cover bg-local bg-no-repeat opacity-80 w-full top-0`}
     >
-      <Navbar />
       <h1
         className='sm:text-[72px] leading-[120%] text-5xl text-white mx-auto 
       text-center font-bold whitespace-nowrap pt-[260px] pb-[290px] cursor-default'

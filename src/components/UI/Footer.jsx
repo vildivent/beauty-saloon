@@ -5,9 +5,9 @@ import style from "../../style";
 
 const Footer = () => (
   <footer className='border-t border-transparent-white lg:w-[67.5%] w-[85%] text-left mx-auto'>
-    <div className='flex sm:justify-between py-[80px]'>
+    <div className='grid sm:grid-flow-col grid-flow-row sm:gap-5 gap-10 text-center sm:py-[80px] py-10'>
       <Link to='/'>
-        <img src={logo} alt='logo' className='w-[60px] h-[60px]' />
+        <img src={logo} alt='logo' className='w-[60px] h-[60px] mx-auto' />
       </Link>
       <div className=''>
         <h1 className={`${style.heading3}`}>Контакты</h1>
@@ -26,13 +26,13 @@ const Footer = () => (
           <span>С 11:00 до 20:00 (Сб-Вс)</span>
         </p>
       </div>
-      <div className=''>
+      <div className='\'>
         <a href={instagramLogo.link}>
           <h1 className={`${style.heading3}`}>Мы в Instagram</h1>
           <img
             src={instagramLogo.img}
             alt={instagramLogo.id}
-            className='w-[36px] h-[36px] opacity-80'
+            className='w-[36px] h-[36px] mx-auto opacity-80'
           />
         </a>
       </div>
