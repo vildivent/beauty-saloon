@@ -28,8 +28,10 @@ const OurWorks = () => {
 
   return (
     <>
-      <h1 className={`${style.heading2} text-center mb-20`}>Наши работы</h1>
-      <ul className='list-none flex justify-center flex-1 pb-[55px] opacity-80 px-4'>
+      <h1 className={`${style.heading2} text-center sm:mb-20 mb-10`}>
+        Наши работы
+      </h1>
+      <ul className='list-none flex justify-center flex-1 sm:pb-[55px] mb-10 opacity-80 px-4'>
         <li
           key={"ourWorks_ShowAll"}
           className={`${style.textMenu} ${
@@ -51,7 +53,7 @@ const OurWorks = () => {
             } font-normal cursor-pointer ${
               index === categoriesSample.length - 1
                 ? "mr-0"
-                : "sm:mr-[50px] mr-4 "
+                : "sm:mr-[50px] mr-2 "
             }`}
             onClick={() => filterOurWorkData(ourWorksData, category.id)}
           >

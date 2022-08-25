@@ -5,14 +5,14 @@ import style from "../../style";
 
 const Footer = () => (
   <footer className='border-t border-transparent-white lg:w-[67.5%] w-[85%] text-left mx-auto'>
-    <div className='grid sm:grid-flow-col grid-flow-row sm:gap-5 gap-10 text-center sm:py-[80px] py-10'>
+    <div className='grid sm:grid-flow-col grid-flow-row gap-5 sm:gap-10 text-center sm:py-[80px] py-8'>
       <Link to='/'>
         <img src={logo} alt='logo' className='w-[60px] h-[60px] mx-auto' />
       </Link>
       <div className=''>
-        <h1 className={`${style.heading3}`}>Контакты</h1>
+        <h1 className={`${style.heading3} mb-3`}>Контакты</h1>
         <p
-          className={`${style.paragraph} w-full grid flex-col gap-4 opacity-80`}
+          className={`${style.paragraph} w-full grid flex-col sm:gap-4 gap-1 opacity-80`}
         >
           <span>+7 (812) 123-45-67</span>
           <span>+7 (911) 123-45-67</span>
@@ -21,7 +21,9 @@ const Footer = () => (
       </div>
       <div className=''>
         <h1 className={`${style.heading3}`}>Режим работы</h1>
-        <p className={`${style.paragraph} grid flex-col gap-4 opacity-80`}>
+        <p
+          className={`${style.paragraph} grid flex-col sm:gap-4 gap-1 opacity-80`}
+        >
           <span>C 10:00 до 21:00 (Пн-Пт)</span>
           <span>С 11:00 до 20:00 (Сб-Вс)</span>
         </p>
@@ -37,7 +39,7 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <div className='border-t border-white opacity-50 text-center py-[30px]'>
+    <div className='border-t border-white opacity-50 text-center sm:py-[30px] py-3'>
       <span className=''>Copyright © 2017 - 2022</span>
     </div>
   </footer>

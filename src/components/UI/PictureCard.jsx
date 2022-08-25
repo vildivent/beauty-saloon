@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "../../style";
 
-const PictureCard = ({ content, width, height }) => {
+const PictureCard = ({ content }) => {
   const [hover, setHover] = useState(false);
   return (
     <>
@@ -10,7 +10,7 @@ const PictureCard = ({ content, width, height }) => {
         <li key={content.id}>
           <Link to={`${content.link}`}>
             <div
-              className={`border border-transparent-brown w-[${width}] h-[${height}] ml-5 mr-0 ${
+              className={`border border-transparent-brown ml-5 mr-0 ${
                 hover ? "bg-[#202020]" : ""
               }`}
               onPointerEnter={() => setHover(() => true)}
@@ -19,13 +19,13 @@ const PictureCard = ({ content, width, height }) => {
               <img
                 src={content.img}
                 alt={content.id}
-                className={`w-[${width}] h-[${height}] relative top-5 right-5 z-10`}
+                className={`relative top-5 right-5 z-10`}
               />
             </div>
           </Link>
 
           <div
-            className={`grid grid-cols-1 mt-[50px] ${
+            className={`grid grid-cols-1 sm:mt-[50px] mt-10 ${
               content.description ? "gap-[10px]" : ""
             } `}
           >
@@ -48,17 +48,17 @@ const PictureCard = ({ content, width, height }) => {
       ) : (
         <li key={content.id}>
           <div
-            className={`border border-transparent-brown w-[${width}] h-[${height}] ml-5 mr-0 hover:bg-[#202020]`}
+            className={`border border-transparent-brown ml-5 mr-0 hover:bg-[#202020]`}
           >
             <img
               src={content.img}
               alt={content.id}
-              className={`w-[${width}] h-[${height}] relative top-5 right-5 z-10`}
+              className={` relative top-5 right-5 z-10`}
             />
           </div>
 
           <div
-            className={`grid grid-cols-1 mt-[50px] cursor-default ${
+            className={`grid grid-cols-1 sm:mt-[50px] mt-10 cursor-default ${
               content.description ? "gap-[10px]" : ""
             } `}
           >

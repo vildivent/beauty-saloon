@@ -2,7 +2,7 @@ const style = {
   heading2:
     "font-heading font-semibold text-[48px] leading-[120%] w-full text-center cursor-default",
   heading3:
-    "font-heading font-bold text-[24px] leading-[120%] w-full mb-[25px] cursor-default",
+    "font-heading font-bold text-[24px] leading-[120%] w-full sm:mb-[25px] mb-3 cursor-default",
   heading4:
     "font-p font-bold text-[27px] leading-[130%] w-full mb-[16px] cursor-default",
   paragraph: "font-p text-[18px] leading-[120%] w-full",
